@@ -1,0 +1,12 @@
+/* Resets */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root{
+  --primary-color: #8e44ad;
+}
+button{
+  cursor: pointer;
+}
