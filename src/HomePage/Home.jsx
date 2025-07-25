@@ -1,16 +1,28 @@
-import React from 'react'
+
 import "./Home.css"
+import { useState } from 'react';
+import { IoIosArrowDown , IoIosArrowUp } from "react-icons/io";
+
 const Home = () => {
+
+   const [showAddForm, setShowAddForm] = useState(false);
+
   return (
     <div className="main-container">
       <nav className='nav-space'>
         <h1 className='nav-head'>Book Tracker</h1>
       </nav>
       <div className="field-container">
-          <button className="home-btn first-btn">
-            Add a new book 
+          <button className="home-btn first-btn"
+          onClick={() => setShowAddForm(!showAddForm)}
+          >
+             Add a new book
+            <span>
+              {showAddForm ? <IoIosArrowUp /> : <IoIosArrowDown />}
+            </span>
           </button>
 
+          {showAddForm && (
           <div className="add-container">
               <form action="">
                   <label htmlFor='title'>Book Title</label>
@@ -43,7 +55,7 @@ const Home = () => {
                   </button>
               </form>
           </div>
-
+        )}
           <button  className="home-btn second-btn">
                 My Library
           </button>
