@@ -15,27 +15,32 @@ const Home = () => {
               <form action="">
                   <label htmlFor='title'>Book Title</label>
                   <br />
-                  <input id='title' type="text" />
+                  <input className='input-box 'id='title' type="text" />
 
                   <br />
 
                   <label  htmlFor='author'>Author</label>
                   <br />
-                  <input  id='author' type="text" />
+                  <input  className='input-box' id='author' type="text" />
 
                   <br />
 
                   <label >Status</label>
                   <br />
-                  <input type="radio" name="status" id="option1" />
+                  <input className='input-radio' type="radio" name="status" id="option1" />
                   <label htmlFor="option1">Read</label>
 
-                  <input type="radio" name="status" id="option2" />
+                  <input className='input-radio' type="radio" name="status" id="option2" />
                   <label htmlFor="option2">Currently Reading</label>
 
-                  <input type="radio" name="status" id="option3" />
-                  <label htmlFor="option3">want To Read</label>
-               
+                  <input  className='input-radio' type="radio" name="status" id="option3" />
+                  <label htmlFor="option3">Want To Read</label>
+                  
+                  <br />
+
+                  <button className="third-btn" type="submit">
+                    Add Book
+                  </button>
               </form>
           </div>
 
