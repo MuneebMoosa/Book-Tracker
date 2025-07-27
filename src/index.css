@@ -6,6 +6,7 @@
 }
 :root{
   --primary-color: #8e44ad;
+  --primary-font: font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 button{
   cursor: pointer;
