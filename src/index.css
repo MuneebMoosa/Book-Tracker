@@ -3,10 +3,11 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+ 
 }
 :root{
   --primary-color: #8e44ad;
-  --primary-font: font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --primary-font: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 button{
   cursor: pointer;
