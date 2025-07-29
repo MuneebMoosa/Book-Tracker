@@ -1,4 +1,5 @@
 import Navigation from '../Components/Navigation/Navigation'
+import Card from '../Components/Cards/Card'
 import "./Library.css"
 
 const Library = () => {
@@ -16,150 +17,18 @@ const Library = () => {
       </div>
 
       <div className="card-container">
-            <div className="card">
-              <h2  className="book-title">The Great Gatsby</h2>
-              <p  className="book-author">by F. Scott Fitzgerald</p>
-              <div className="status">Reading</div>
-            
-                  <div className="card-footer">
-                      <div className="manipulate">
-                        <button className="change-status">Change Status</button>
-                        <button className="delete-status">Delete</button>
-                      </div>
-                  </div>
-            </div>
-            <div className="card">
-              <h2  className="book-title">The Great Gatsby</h2>
-              <p  className="book-author">by F. Scott Fitzgerald</p>
-              <div className="status">Reading</div>
-            
-                  <div className="card-footer">
-                      <div className="manipulate">
-                        <button className="change-status">Change Status</button>
-                        <button className="delete-status">Delete</button>
-                      </div>
-                  </div>
-            </div>
-            <div className="card">
-              <h2  className="book-title">The Great Gatsby</h2>
-              <p  className="book-author">by F. Scott Fitzgerald</p>
-              <div className="status">Reading</div>
-            
-                  <div className="card-footer">
-                      <div className="manipulate">
-                        <button className="change-status">Change Status</button>
-                        <button className="delete-status">Delete</button>
-                      </div>
-                  </div>
-            </div>
-            <div className="card">
-              <h2  className="book-title">The Great Gatsby</h2>
-              <p  className="book-author">by F. Scott Fitzgerald</p>
-              <div className="status">Reading</div>
-            
-                  <div className="card-footer">
-                      <div className="manipulate">
-                        <button className="change-status">Change Status</button>
-                        <button className="delete-status">Delete</button>
-                      </div>
-                  </div>
-            </div>
-            <div className="card">
-              <h2  className="book-title">The Great Gatsby</h2>
-              <p  className="book-author">by F. Scott Fitzgerald</p>
-              <div className="status">Reading</div>
-            
-                  <div className="card-footer">
-                      <div className="manipulate">
-                        <button className="change-status">Change Status</button>
-                        <button className="delete-status">Delete</button>
-                      </div>
-                  </div>
-            </div>
-            <div className="card">
-              <h2  className="book-title">The Great Gatsby</h2>
-              <p  className="book-author">by F. Scott Fitzgerald</p>
-              <div className="status">Reading</div>
-            
-                  <div className="card-footer">
-                      <div className="manipulate">
-                        <button className="change-status">Change Status</button>
-                        <button className="delete-status">Delete</button>
-                      </div>
-                  </div>
-            </div>
-            <div className="card">
-              <h2  className="book-title">The Great Gatsby</h2>
-              <p  className="book-author">by F. Scott Fitzgerald</p>
-              <div className="status">Reading</div>
-            
-                  <div className="card-footer">
-                      <div className="manipulate">
-                        <button className="change-status">Change Status</button>
-                        <button className="delete-status">Delete</button>
-                      </div>
-                  </div>
-            </div>
-            <div className="card">
-              <h2  className="book-title">The Great Gatsby</h2>
-              <p  className="book-author">by F. Scott Fitzgerald</p>
-              <div className="status">Reading</div>
-            
-                  <div className="card-footer">
-                      <div className="manipulate">
-                        <button className="change-status">Change Status</button>
-                        <button className="delete-status">Delete</button>
-                      </div>
-                  </div>
-            </div>
-            <div className="card">
-              <h2  className="book-title">The Great Gatsby</h2>
-              <p  className="book-author">by F. Scott Fitzgerald</p>
-              <div className="status">Reading</div>
-            
-                  <div className="card-footer">
-                      <div className="manipulate">
-                        <button className="change-status">Change Status</button>
-                        <button className="delete-status">Delete</button>
-                      </div>
-                  </div>
-            </div>
-            <div className="card">
-              <h2  className="book-title">The Great Gatsby</h2>
-              <p  className="book-author">by F. Scott Fitzgerald</p>
-              <div className="status">Reading</div>
-            
-                  <div className="card-footer">
-                      <div className="manipulate">
-                        <button className="change-status">Change Status</button>
-                        <button className="delete-status">Delete</button>
-                      </div>
-                  </div>
-            </div>
-            <div className="card">
-              <h2  className="book-title">The Great Gatsby</h2>
-              <p  className="book-author">by F. Scott Fitzgerald</p>
-              <div className="status">Reading</div>
-            
-                  <div className="card-footer">
-                      <div className="manipulate">
-                        <button className="change-status">Change Status</button>
-                        <button className="delete-status">Delete</button>
-                      </div>
-                  </div>
-            </div>
-            <div className="card">
-              <h2  className="book-title">The Great Gatsby</h2>
-              <p  className="book-author">by F. Scott Fitzgerald</p>
-              <div className="status">Reading</div>
-            
-                  <div className="card-footer">
-                      <div className="manipulate">
-                        <button className="change-status">Change Status</button>
-                        <button className="delete-status">Delete</button>
-                      </div>
-                  </div>
-            </div>
+         <Card  bgColor="#c69dd8"/>
+         <Card  bgColor="#c69dd8"/>
+         <Card  bgColor="#c69dd8"/>
+         <Card  bgColor="#c69dd8"/>
+         <Card  bgColor="#B6A4B0"/>
+         <Card  bgColor="#B6A4B0"/>
+         <Card  bgColor="#B6A4B0"/>
+         <Card  bgColor="#B6A4B0"/>
+         <Card  bgColor="#F1EEF6"/>
+         <Card  bgColor="#F1EEF6"/>
+         <Card  bgColor="#F1EEF6"/>
+         <Card  bgColor="#F1EEF6"/>
       </div>
 
 
