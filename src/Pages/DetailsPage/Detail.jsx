@@ -1,4 +1,4 @@
-import Navigation from '../Components/Navigation/Navigation'
+import Navigation from '../../Components/Navigation/Navigation'
 import './Detail.css'
 const Detail = () => {
   return (

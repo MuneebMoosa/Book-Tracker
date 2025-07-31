@@ -1,5 +1,5 @@
-import Navigation from '../Components/Navigation/Navigation'
-import Card from '../Components/Cards/Card'
+import Navigation from '../../Components/Navigation/Navigation'
+import Card from '../../Components/Cards/Card'
 import "./Library.css"
 
 const Library = () => {
