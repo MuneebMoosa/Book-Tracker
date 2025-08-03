@@ -8,6 +8,7 @@
 :root{
   --primary-color: #8e44ad;
   --primary-font: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  --Read-color: #f9f9f9;
 }
 button{
   cursor: pointer;

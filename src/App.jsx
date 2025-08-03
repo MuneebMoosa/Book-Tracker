@@ -7,10 +7,10 @@ import ChangeStatus from './Components/ChangeStatus/ChangeStatus';
 const App = () => {
   return (
     <div>
-      {/* <Home/>
+      {/* <Home/> */}
       <Library/>
-      <Detail/> */}
-      <ChangeStatus/>
+      {/* <Detail/> */}
+      {/* <ChangeStatus/> */}
     </div>
   )
 }
