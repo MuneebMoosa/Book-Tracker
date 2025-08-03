@@ -1,0 +1,43 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Dim the background */
+  backdrop-filter: blur(5px);      /* Blur the background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.status-container {
+  background: white;
+  border: 2px solid var(--primary-color);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  font-size: 0.9rem;
+  font-family: var(--primary-font);
+  z-index: 1001;
+}
+
+.status-container label {
+  margin-right: 1rem;
+  padding: 2px;
+}
+.change-btn-container{
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+.change-btn{
+  margin-right: 10px;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  width: 70px;
+  height: 20px;
+  border-radius: 5px;
+}

@@ -3,12 +3,14 @@ import "./index.css";
 import Home from './Pages/HomePage/Home';
 import Library from './Pages/LibraryPage/Library';
 import Detail from './Pages/DetailsPage/Detail';
+import ChangeStatus from './Components/ChangeStatus/ChangeStatus';
 const App = () => {
   return (
     <div>
-      <Home/>
+      {/* <Home/>
       <Library/>
-      <Detail/>
+      <Detail/> */}
+      <ChangeStatus/>
     </div>
   )
 }

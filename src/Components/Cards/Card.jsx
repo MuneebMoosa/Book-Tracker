@@ -1,16 +1,16 @@
 import React from 'react'
 import './Card.css' 
-const Card = ({bgColor}) => {
+const Card = ({ id, title, author, status, bgColor, onDelete, onChangeStatus }) => {
   return (
     <div className="card" style={{ backgroundColor: bgColor }}>
-          <h2  className="book-title">The Great Gatsby</h2>
-          <p  className="book-author">by F. Scott Fitzgerald</p>
-          <div className="status">Reading</div>
+          <h2  className="book-title">{title}</h2>
+          <p  className="book-author">by {author}</p>
+          <div className="status">{status}</div>
         
               <div className="card-footer">
                   <div className="manipulate">
-                    <button className="change-status">Change Status</button>
-                    <button className="delete-status">Delete</button>
+                    <button className="change-status" onClick={() => onChangeStatus(id)}>Change Status</button>
+                    <button className="delete-status" onClick={() => onDelete(id)}>Delete</button>
                   </div>
               </div>
         </div>
