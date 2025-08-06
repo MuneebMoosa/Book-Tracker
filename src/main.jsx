@@ -5,6 +5,7 @@ import App from './App.jsx'
 import Home from './Pages/HomePage/Home';
 import Library from './Pages/LibraryPage/Library';
 import Detail from './Pages/DetailsPage/Detail';
+import Settings from './Pages/SettingsPage/Settings.jsx';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
         path: '/details/:id', 
         element: <Detail /> 
       },
+      {
+        path: '/settings',
+        element: <Settings/>
+      }
     ],
   },
 ]);

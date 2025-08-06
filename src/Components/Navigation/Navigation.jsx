@@ -1,4 +1,5 @@
 import { FaBook } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 import './Navigation.css'
 const Navigation = () => {
   return (
@@ -6,10 +7,10 @@ const Navigation = () => {
       <nav className='nav-bar'>
         <h1 className='nav-main-head'><span><FaBook /></span>Book Tracker</h1>
         <div className="nav-btns">
-            <button className='index-btn'>Home</button>
-            <button className='index-btn'>Add Book</button>
-            <button className='index-btn'>My Library</button>
-            <button className='index-btn'>Settings</button>
+         <NavLink to="/" className="index-btn"> Home</NavLink>
+         <NavLink to="/" className="index-btn"> Add Book</NavLink>
+         <NavLink to="/library" className="index-btn"> My Library</NavLink>
+         <NavLink to="/settings" className="index-btn"> Settings</NavLink>
         </div>
       </nav>
     </div>

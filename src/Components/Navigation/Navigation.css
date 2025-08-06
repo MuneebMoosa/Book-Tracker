@@ -29,6 +29,8 @@
   width: 90px;
   height: 25px;
   background: #fff;
+  text-decoration: none;
+  text-align: center;
   font-family: var(--primary-font);
   color: var(--primary-color);
   border: 2px solid var(--primary-color);
@@ -38,4 +40,8 @@
 .index-btn:hover{
   background: var(--primary-color);
   color: #fff;
+}
+.index-btn.active {
+  background-color: var(--primary-color);
+  color: white;
 }
