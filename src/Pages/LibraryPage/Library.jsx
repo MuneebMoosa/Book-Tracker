@@ -54,7 +54,9 @@ const Library = () => {
       </div>
 
         <div className="card-container">
-          {filteredBooks.map(book => (
+           {filteredBooks.length === 0 ? (
+              <h1 className="empty-library-message">OOPS! Nothing HERE :)</h1>
+            ) : filteredBooks.map(book => (
             <Card
               key={book.id}
               id={book.id}
