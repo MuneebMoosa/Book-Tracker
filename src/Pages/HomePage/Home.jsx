@@ -2,8 +2,10 @@
 import "./Home.css"
 import { useState } from 'react';
 import { IoIosArrowDown , IoIosArrowUp } from "react-icons/io";
-
+import { useNavigate } from "react-router-dom";
 const Home = () => {
+  // for routing
+  const navigate = useNavigate();
   // value rendering part
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
@@ -101,7 +103,8 @@ const Home = () => {
               </form>
           </div>
         )}
-          <button  className="home-btn second-btn">
+        
+          <button  className="home-btn second-btn" onClick={() => navigate("/library")}>
                 My Library
           </button>
       </div>

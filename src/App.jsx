@@ -1,16 +1,11 @@
 import React from 'react'
 import "./index.css";
-import Home from './Pages/HomePage/Home';
-import Library from './Pages/LibraryPage/Library';
-import Detail from './Pages/DetailsPage/Detail';
-import ChangeStatus from './Components/ChangeStatus/ChangeStatus';
+import { Outlet } from 'react-router-dom';
 const App = () => {
   return (
     <div>
-      {/* <Home/> */}
-      <Library/>
-      {/* <Detail/> */}
-      {/* <ChangeStatus/> */}
+     {/* nothing because its rendering through routes */}
+     <Outlet/>
     </div>
   )
 }
