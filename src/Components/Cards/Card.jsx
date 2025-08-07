@@ -1,8 +1,9 @@
-import React from 'react'
+import {useNavigate} from 'react-router-dom';
 import './Card.css' 
 const Card = ({ id, title, author, status, bgColor, onDelete, onChangeStatus }) => {
+  const navigate = useNavigate();
   return (
-    <div className="card" style={{ backgroundColor: bgColor }}>
+    <div className="card" style={{ backgroundColor: bgColor }}  onDoubleClick={() => navigate(`/details/${id}`)} >
           <h2  className="book-title">{title}</h2>
           <p  className="book-author">by {author}</p>
           <div className="status">{status}</div>
