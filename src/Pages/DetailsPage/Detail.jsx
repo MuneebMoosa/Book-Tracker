@@ -14,7 +14,7 @@ const Detail = () => {
       const foundbook = books.find(book => book.id === id);
       setBook(foundbook);
   }, [id]);
-
+// poda patti
   // handle delete
   const handleDelete = () => {
     const books = JSON.parse(localStorage.getItem('books')) || [];
