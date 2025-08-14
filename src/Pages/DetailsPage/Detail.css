@@ -26,10 +26,11 @@
 }
 .thoughts-container{
   padding: 20px;
+  min-width: 500px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-right: 400px;
+  margin-right: 300px;
 }
 /* all need to change just rough */
 .thoughts-container .note-input-area{
@@ -46,8 +47,23 @@
   box-sizing: border-box;
 }
 .note-box{
-  width: max-content;
+  width: 500px;
   height: max-content;
   background-color: var(--primary-color);
   color: #fff;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.notes-list {
+  max-width: 400px;
+  word-wrap: break-word;
+  margin-top: 1rem;
+}
+.notes-list button{
+  background: var(--primary-color);
+  border: none;
 }

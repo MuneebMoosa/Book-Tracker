@@ -6,15 +6,18 @@ import { useState,useEffect } from 'react';
 const Detail = () => {
   const {id} = useParams();
   const navigate = useNavigate();
-  const [book, setBook] = useState([]);
+  const [book, setBook] = useState(null);
   const [showChangeStatus ,setShowChangeStatus] = useState(false);
+  const [newNote, setNewNote] = useState('');
   // for retrieving book from localstorage
   useEffect(() => {
       const books = JSON.parse(localStorage.getItem('books')) || [];
       const foundbook = books.find(book => book.id === id);
-      setBook(foundbook);
+        if (foundbook) {
+        // ✅ Always make sure notes exists as an array
+        setBook({ ...foundbook, notes: foundbook.notes || [] });
+      }
   }, [id]);
-// poda patti
   // handle delete
   const handleDelete = () => {
     const books = JSON.parse(localStorage.getItem('books')) || [];
@@ -33,6 +36,47 @@ const Detail = () => {
     setBook(updatedBook); 
     setShowChangeStatus(false);
   };
+
+  // notes part start
+   // Add note
+  const handleAddNote = () => {
+    if (!newNote.trim()) return;
+
+    const books = JSON.parse(localStorage.getItem('books')) || [];
+    const updatedBooks = books.map(b =>
+      b.id === id ? { ...b, notes: [...b.notes, newNote] } : b
+    );
+    localStorage.setItem('books', JSON.stringify(updatedBooks));
+
+    setBook(prev => ({ ...prev, notes: [...prev.notes, newNote] }));
+    setNewNote('');
+  };
+
+  // Delete note
+  const handleDeleteNote = (noteIndex) => {
+    const books = JSON.parse(localStorage.getItem('books')) || [];
+    const updatedBooks = books.map(b =>
+      b.id === id
+        ? { ...b, notes: b.notes.filter((_, i) => i !== noteIndex) }
+        : b
+    );
+    localStorage.setItem('books', JSON.stringify(updatedBooks));
+
+    setBook(prev => ({
+      ...prev,
+      notes: prev.notes.filter((_, i) => i !== noteIndex)
+    }));
+  };
+  // notes part end
+
+  if (!book) {
+    return (
+      <div className="details-container">
+        <Navigation />
+        <p style={{ padding: '2rem' }}>Book not found or loading...</p>
+      </div>
+    );
+  }
   return (
     <div className='details-container'>
       <Navigation/>
@@ -44,32 +88,42 @@ const Detail = () => {
                 <p className='status-details'>Status : {book.status}</p>
                 <button className='change-status-details' onClick={() => setShowChangeStatus(true)}>Change Status</button>
                 <button className='change-status-details' onClick={handleDelete}>Delete</button>
+              
             </div>
-            <div className="thoughts-container">
-                    {/* all need to change just rough */}
-                      <div className="book-notes">
-                        <h2>Your Notes</h2>
-                        <div className="notes-list">
-                          {/* Example: Replace with dynamic notes later */}
-                          <div className="note-box">This is a saved note.</div>
-                          <div className="note-box">Another saved note here.</div>
-                        </div>
-                        <div className="note-input-area">
-                            {/* <textarea className='textarea'
-                              placeholder="Write your thoughts, summary, or anything..."
-                            ></textarea> */}
-                            <button>Add Note</button>
-                        </div>
-                      </div>
+          <div className="thoughts-container">
+            <div className="book-notes">
+              <h2>Your Notes</h2>
+              <div className="notes-list">
+                {book.notes.length > 0 ? (
+                  book.notes.map((note, index) => (
+                    <div key={index} className="note-box">
+                      {note}
+                      <button onClick={() => handleDeleteNote(index)}>❌</button>
+                    </div>
+                  ))
+                ) : (
+                  <p>No notes yet</p>
+                )}
               </div>
+              <div className="note-input-area">
+                <textarea
+                  className='textarea'
+                  placeholder="Write your thoughts..."
+                  value={newNote}
+                  onChange={(e) => setNewNote(e.target.value)}
+                ></textarea>
+                <button onClick={handleAddNote}>Add Note</button>
+              </div>
+            </div>
           </div>
+        </div>
          {showChangeStatus && (
           <ChangeStatus
             onConfirm={handleStatusChange}
             onCancel={() => setShowChangeStatus(false)}
           />
         )}
-    </div>
+     </div>
   )
 }
 
