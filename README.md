@@ -18,7 +18,7 @@ If you are developing a production application, we recommend using TypeScript wi
 📚 Book Tracker
 
 A simple and user-friendly React.js application to manage your personal reading list.
-You can add books, update their reading status, write your personal thoughts or descriptions for each book, delete them, and sort them by categories such as Wishlist, Reading, and Completed. This is fully frontend based and my first project in react a bulit this as a part of react learning.
+You can add books, update their reading status, write your personal thoughts or descriptions for each book, delete them, and sort them by categories such as Wishlist, Reading, and Completed. This is fully frontend based and also my first project in react i built this as a part of react learning.
 
 ✨ Features
 
