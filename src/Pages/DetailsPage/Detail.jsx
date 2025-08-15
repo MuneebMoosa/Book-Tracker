@@ -1,3 +1,4 @@
+import { FaPencilAlt } from "react-icons/fa";
 import Navigation from '../../Components/Navigation/Navigation'
 import ChangeStatus from '../../Components/ChangeStatus/ChangeStatus'
 import './Detail.css'
@@ -9,6 +10,7 @@ const Detail = () => {
   const [book, setBook] = useState(null);
   const [showChangeStatus ,setShowChangeStatus] = useState(false);
   const [newNote, setNewNote] = useState('');
+  const [showTextArea, setShowTextArea] = useState(false);
   // for retrieving book from localstorage
   useEffect(() => {
       const books = JSON.parse(localStorage.getItem('books')) || [];
@@ -102,10 +104,11 @@ const Detail = () => {
                     </div>
                   ))
                 ) : (
-                  <p>No notes yet</p>
+                  <p>No notes yet !!!</p>
                 )}
               </div>
               <div className="note-input-area">
+                <button className="add-note-btn"> <FaPencilAlt /> Add Note</button>
                 <textarea
                   className='textarea'
                   placeholder="Write your thoughts..."
