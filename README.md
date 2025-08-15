@@ -1,5 +1,5 @@
 # Book-Tracker
-📚 Book Tracker App A clean React app to add, track, and manage your books. Mark them as Wishlist, Reading, or Completed all in one place.
+📚 Book Tracker App is a clean React app to add, track, and manage your books. Mark them as Wishlist, Reading, or Completed all in one place.
 >>>>>>> f2bbd0d8d7855e995a1304369f70ca84b74b23b9
 📚 Book Tracker
 
