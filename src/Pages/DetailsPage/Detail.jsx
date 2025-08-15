@@ -1,4 +1,5 @@
 import { FaPencilAlt } from "react-icons/fa";
+import { MdOutlineDeleteOutline } from "react-icons/md";
 import Navigation from '../../Components/Navigation/Navigation'
 import ChangeStatus from '../../Components/ChangeStatus/ChangeStatus'
 import './Detail.css'
@@ -100,7 +101,7 @@ const Detail = () => {
                   book.notes.map((note, index) => (
                     <div key={index} className="note-box">
                       {note}
-                      <button onClick={() => handleDeleteNote(index)}>❌</button>
+                      <MdOutlineDeleteOutline className="del-icon" onClick={() => handleDeleteNote(index)}/>
                     </div>
                   ))
                 ) : (
