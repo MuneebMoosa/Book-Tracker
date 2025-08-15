@@ -108,14 +108,23 @@ const Detail = () => {
                 )}
               </div>
               <div className="note-input-area">
-                <button className="add-note-btn"> <FaPencilAlt /> Add Note</button>
-                <textarea
-                  className='textarea'
-                  placeholder="Write your thoughts..."
-                  value={newNote}
-                  onChange={(e) => setNewNote(e.target.value)}
-                ></textarea>
-                <button onClick={handleAddNote}>Add Note</button>
+                {!showTextArea &&( 
+                <button className="add-note-btn" onClick={() => setShowTextArea(true)}> <FaPencilAlt /> Add Note</button>
+                )}
+                {showTextArea && (
+                <>
+                  <textarea
+                    className='textarea'
+                    placeholder="Write your thoughts..."
+                    value={newNote}
+                    onChange={(e) => setNewNote(e.target.value)}
+                  ></textarea>
+                  <div className="text-area-btns-container">
+                    <button className="text-area-btns" onClick={() => {handleAddNote(); setShowTextArea(false)}}>Add</button>
+                    <button className="text-area-btns" onClick={() => {setShowTextArea(false);setNewNote('');}}>Cancel</button>
+                  </div>
+                </>
+                )} 
               </div>
             </div>
           </div>
